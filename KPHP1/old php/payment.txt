@@ -1,0 +1,27 @@
+ <html>
+ <body>
+ <div id="AUser">
+        <hr>
+        <center><H1>ADD USER</H1></center>&nbsp
+            <form name="Control" method="post" action="Ins.php?id=<?php echo $row['ID']; ?>">
+                <div class="row">
+                    <div class="col">
+                        <h4>First Name</h4>
+                        <input type="text" name="firstName" placeholder="Enter First Name" required="" class="form-control">
+                        <br>
+                        <h4>Block</h4>
+                        <input type="number" name="Block" placeholder="Enter Block" required="" class="form-control">
+                    </div>      
+                    <div class="col">
+                        <h4>Last Name</h4>
+                        <input type="text" name="lastName" placeholder="Enter Last Name" required="" class="form-control">
+                        <br>
+                        <h4>Lot</h4>
+                        <input type="number" name="Lot" placeholder="Enter Lot" minlength="10" required="" class="form-control">
+                    </div>
+                </div>
+                 <input type="submit" name="ADD" class="btn btn-primary mt-4" value="ADD">
+            </form>
+        </div>
+	</body>
+</html>

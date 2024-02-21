@@ -1,0 +1,404 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/karlaville.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px);  
+  z-index: -1;
+}
+
+a {
+  color: black;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+.logo-container img {
+  max-width: 250px; 
+  height: auto; 
+}
+.positioned-logo {
+  position: relative;
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.positioned-logo img {
+  max-width: 250px; 
+  height: auto;
+  position: absolute;
+  top: -50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+/*landing page and home page */
+.landing-page {
+  background-color: #ffffff; 
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 100px 0;
+}
+.landing-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: -70px;
+}
+.landing-text {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.landing-logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -50px;
+}
+.landing-logo-container img {
+  max-width: 250px; 
+  height: auto;
+}
+
+/*about section */
+.about-section {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  margin-top: 40px;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.officer-info {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+.officer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.officer-list li {
+  margin-bottom: 10px;
+}
+
+.officer-list strong {
+  color: #00632d;
+}
+
+/*for positioning */
+.positioned-about {
+  position: relative;
+}
+
+.positioned-about img {
+  max-width: 250px;
+  height: auto;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.officer-info .officer-list {
+  margin-top: 20px;
+}
+/*contact page */
+.contact-section {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 0; 
+}
+
+.contact-info {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+/*login container*/
+.login-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  display: none;
+  
+}
+.login-container h4 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.invisible-label {
+  opacity: 0;
+  font-size: 0;
+}
+
+.login-form input::placeholder {
+  opacity: 1;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.remember-label {
+  display: inline; 
+  vertical-align: middle; 
+  margin-left: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+input[type="checkbox"] {
+  position: inline;
+}
+.with-border {
+  border: 2px solid rgb(52,58,64); /* Add border with the desired style and color */
+  border-radius: 15%; /* Makes the border round (for circular icons) */
+  padding: 10px; /* Add padding to create space between the icon and border */
+  font-size: 15px; /* Adjust font size as needed */
+  color: rgb(52,58,64); /* Change the icon color to match the border */
+}
+
+button {
+  background-color: rgb(52,58,64);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: rgb(58, 22, 189);
+}
+.login-container.show-login {
+  display: block;
+}
+.navbar {
+  background-color: rgb(52,58,64);
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  z-index: 1;
+  text-align: center;
+}
+
+.navbar-toggle {
+  color: #FF0000;;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.navbar-toggle .fa-bars {
+  color: #ffffff; 
+}
+
+.navbar-links {
+  display: none;
+  align-items: flex-start; 
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000000;
+  border-top: none;
+  z-index: 1;
+}
+
+.navbar-links.show {
+  display: flex;
+  flex-direction: column; 
+}
+
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  color: #ffd000;
+}
+/* Media query for screens smaller than 700px (mobile) */
+@media screen and (max-width: 700px) {
+  .landing-title {
+    font-size: 28px;
+  }
+  .landing-text {
+    font-size: 16px;
+  }
+  .landing-logo-container img {
+    max-width: 180px;
+  }
+  .positioned-logo img {
+    max-width: 180px;
+  }
+  .about-section {
+    padding: 20px;
+  }
+  .about-section h2 {
+    font-size: 28px;
+  }
+  .officer-info {
+    font-size: 14px;
+  }
+  .officer-list li {
+    margin-bottom: 5px;
+  }
+  .contact-section h2 {
+    font-size: 28px;
+  }
+  .contact-info {
+    font-size: 14px;
+  }
+  .contact-info ul {
+    padding-left: 0;
+  }
+  .contact-info li {
+    margin-bottom: 5px;
+  }
+  .login-container {
+    width: 85%;
+    padding: 20px;
+  }
+}
+
+/* Media query for screens larger than 700px (desktop) */
+@media (min-width: 701px) {
+  .landing-title {
+    font-size: 36px;
+  }
+  .landing-text {
+    font-size: 18px;
+  }
+  .landing-logo-container img {
+    max-width: 250px;
+  }
+  .positioned-logo img {
+    max-width: 250px;
+  }
+  .about-section {
+    margin-top: 40px;
+  }
+  .about-section h2 {
+    font-size: 36px;
+  }
+  .officer-info {
+    font-size: 18px;
+  }
+  .officer-list li {
+    margin-bottom: 10px;
+  }
+  .contact-section h2 {
+    font-size: 36px;
+  }
+  .contact-info {
+    font-size: 18px;
+  }
+  .contact-info ul {
+    padding-left: 20px;
+  }
+  .contact-info li {
+    margin-bottom: 10px;
+  }
+  .login-container {
+    width: 100%;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .login-container {
+      width: 65%;
+      padding: 40px;
+  }
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 2000px) {
+  .desktop-only {
+      display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+      background-position: center top; 
+  }
+}
